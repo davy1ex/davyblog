@@ -1,7 +1,8 @@
 {
 	"nodes":[
-		{"id":"bfe576c35ddd1e7d","x":-374,"y":-203,"width":250,"height":60,"type":"text","text":"12323123"},
-		{"id":"b133bf1c881adb90","x":-191,"y":-65,"width":250,"height":60,"type":"text","text":"5678\n"}
+		{"id":"bfe576c35ddd1e7d","type":"text","text":"12323123","x":-374,"y":-203,"width":250,"height":60},
+		{"id":"b133bf1c881adb90","type":"text","text":"5678\n","x":-191,"y":-65,"width":250,"height":60},
+		{"id":"4b9116849ceb1ebc","x":-460,"y":-65,"width":720,"height":2145,"type":"text","text":"![[Как не быть какашкой в прорубе]]"}
 	],
 	"edges":[
 		{"id":"9e91a0dfb734d319","fromNode":"bfe576c35ddd1e7d","fromSide":"bottom","toNode":"b133bf1c881adb90","toSide":"top"}
