@@ -8,16 +8,16 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
-    pageTitleSuffix: "",
+    pageTitle: "davyblog",  // Измените на ваш (было "Quartz 4")
+    pageTitleSuffix: " - Davy Blog",  // Опционально
     enableSPA: true,
     enablePopovers: true,
     analytics: {
-      provider: "plausible",
+      provider: "plausible",  // Или null, если не нужно
     },
-    locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    locale: "en-US",  // Для русского (dates/i18n; был en-US)
+    baseUrl: "davy1ex.github.io/davyblog",  // Для GitHub Pages (без https://; repo path)
+    ignorePatterns: ["private", "templates", ".obsidian"],  // Нет Canvas — OK для копирования
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
@@ -66,12 +66,14 @@ const config: QuartzConfig = {
         },
         keepBackground: false,
       }),
-      Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
+      Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: true }),  // Включено для embeds (wikilinks в Canvas)
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
+      // Optional: Custom Canvas Transformer (auto-embed .canvas в MD)
+      // Plugin.CanvasTransformer(),  // Раскомментируйте ниже, если добавите плагин
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [
@@ -84,12 +86,16 @@ const config: QuartzConfig = {
         enableSiteMap: true,
         enableRSS: true,
       }),
-      Plugin.Assets(),
-      Plugin.Static(),
+      Plugin.Assets({  
+        enable: true, 
+        rootDir: "content", 
+      }),
+      Plugin.Static({
+        enable: true,  
+      }),
       Plugin.Favicon(),
       Plugin.NotFoundPage(),
-      // Comment out CustomOgImages to speed up build time
-      Plugin.CustomOgImages(),
+      Plugin.CustomOgImages(),  // Опционально, для share images
     ],
   },
 }

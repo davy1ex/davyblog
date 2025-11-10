@@ -17,7 +17,7 @@
 
 тест: [[test canvas.canvas|test canvas]]
 
-<iframe src="/Canvas/html/test.html" width="100%" height="700" frameborder="0" allowfullscreen loading="lazy" style="border: 1px solid #ddd; max-width: 100%; display: block; margin: 10px 0;"></iframe>
+<iframe src="/Canvas/html/test_canvas.html" width="100%" height="700" frameborder="0" allowfullscreen loading="lazy" style="border: 1px solid #ddd; max-width: 100%; display: block; margin: 10px 0;"></iframe>
 
 
-<object data="./Canvas/html/test.html" width="100%" height="700" type="text/html"></object>
+<object data="./Canvas/html/test_canvas.html" width="100%" height="700" type="text/html"></object>
