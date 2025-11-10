@@ -19,3 +19,4 @@
 <iframe src="./Canvas/html/test_canvas.html" width="100%" height="700" frameborder="0" allowfullscreen style="border: 1px solid #ddd;"></iframe>
 
 
+<object data="./Canvas/html/test.html" width="100%" height="700" type="text/html"></object>
