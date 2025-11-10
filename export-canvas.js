@@ -29,7 +29,7 @@ function exportCanvas(canvasFile) {
     });
   }
 
-  const htmlFilename = path.basename(canvasFile, '.canvas') + '.html';
+  const htmlFilename = path.basename(canvasFile, '.canvas').replace(/\s+/g, '_').toLowerCase() + '.html';
   const htmlPath = path.join(canvasDir, 'html', htmlFilename);
   const libPath = path.join(canvasDir, 'lib');
 

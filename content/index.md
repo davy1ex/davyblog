@@ -16,4 +16,5 @@
 - Веду авторский YouTube канал dev1ex 4 года [🔗 он тут](https://www.youtube.com/@dev1ex180)
 
 тест: [[test canvas.canvas|test canvas]]
-<iframe src="./Canvas/html/test.html" width="100%" height="600" frameborder="0"></iframe>
+<iframe src="./Canvas/html/test.html" width="100%" height="600" frameborder="0" style="border: 1px solid #ccc; max-width: 100%; overflow: auto;"></iframe>
+
