@@ -3,7 +3,6 @@
   "description": "🌱 publish your digital garden and notes as a website",
   "private": true,
   "version": "4.5.2",
-  "type": "module",
   "author": "jackyzha0 <j.zhao2k19@gmail.com>",
   "license": "MIT",
   "homepage": "https://quartz.jzhao.xyz",
@@ -17,7 +16,8 @@
     "check": "tsc --noEmit && npx prettier . --check",
     "format": "npx prettier . --write",
     "test": "tsx --test",
-    "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1"
+    "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
+    "export-canvas": "node export-canvas.js"
   },
   "engines": {
     "npm": ">=10.9.2",
